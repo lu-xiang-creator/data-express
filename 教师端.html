@@ -2195,7 +2195,7 @@ var _bm_5f10=171094,_ck_fceb=&quot;ed5f2741c96e&quot;;&lt;/script&gt;
             let db = [];
             try {
                 // 使用CORS代理获取quickform.cn数据
-                const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://quickform.cn/api/fpllg2asnl/all');
+                const proxyUrl = 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent('https://quickform.cn/api/fpllg2asnl/all');
                 const res = await fetch(proxyUrl);
                 const result = await res.json();
                 db = result.submissions || result.data || result.list || result.records || [];

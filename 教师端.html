@@ -2194,7 +2194,9 @@ var _bm_5f10=171094,_ck_fceb=&quot;ed5f2741c96e&quot;;&lt;/script&gt;
         async function fetchData(classFilter) {
             let db = [];
             try {
-                const res = await fetch('/api/all');
+                // 使用CORS代理获取quickform.cn数据
+                const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://quickform.cn/api/fpllg2asnl/all');
+                const res = await fetch(proxyUrl);
                 const result = await res.json();
                 db = result.submissions || result.data || result.list || result.records || [];
                 db = db.map(i => {

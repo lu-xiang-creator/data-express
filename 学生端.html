@@ -3056,7 +3056,7 @@ var _bm_753c=881415,_ck_dce1=&quot;f4c79feb201b&quot;;&lt;/script&gt;
             const data = { name: currentUser.name, class: currentUser.class, score: score, stats: stats, time: new Date().toLocaleString() };
             try {
                 const fd = new FormData(); for(const k in data) fd.append(k, typeof data[k]==='object'?JSON.stringify(data[k]):data[k]);
-                await fetch('/api/submit', { method: 'POST', body: fd });
+                await fetch('https://quickform.cn/api/fpllg2asnl', { method: 'POST', body: fd });
             } catch(e) { console.error(e); }
 
             document.getElementById('student-result').classList.remove('hidden');
